@@ -94,7 +94,8 @@ module CsSwitch
         puts "/* CloudStack database update statements */"
         offerings.each do |offering|
           print "UPDATE disk_offering SET domain_id = "
-          print(destination["name"] == "ROOT" ? "NULL" : destination["id"])
+          # FIXME Domain ID is db id and NOT uuid
+          print(destination["name"] == "ROOT" ? "1" : destination["id"])
           puts " WHERE uuid = \"#{offering['id']}\";"
         end
       end
