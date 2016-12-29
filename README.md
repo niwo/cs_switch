@@ -23,4 +23,4 @@ Run the CLI to generate SQL update statements (example):
 
 ```sh
 $ bin/cs_switch sql --source-domain Testdomain --limit 1cpu_1gb
-``
+```
