@@ -104,7 +104,7 @@ module CsSwitch
         offerings.each do |offering|
           print "UPDATE Resources SET Creation_Domain = (SELECT ID_Domain FROM Domains WHERE name = \"#{destination["name"]}\")"
           print ", Public = 1" if destination["name"] == "ROOT"
-          puts " WHERE REF_Resource = \"#{offering['id']}\");"
+          puts " WHERE REF_Resource = \"#{offering['id']}\";"
 
           print "UPDATE Prices set ID_Catalog = (SELECT ID_Domain FROM Domains WHERE name = \"#{destination["name"]}\")"
           puts " WHERE ID_Resource IN (SELECT ID_Resource FROM Resources WHERE REF_Resource = \"#{offering['id']}\");"
