@@ -49,7 +49,7 @@ module CsSwitch
       if source_domain = find_domain(options[:source_domain])
         @cs.list_service_offerings(
           domain_id: source_domain['id'],
-          name: options[:limit]
+          listall: true
         )
       else
         raise "Source domain #{domain} not found."
