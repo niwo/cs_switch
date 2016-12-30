@@ -137,8 +137,7 @@ module CsSwitch
         say "ERROR: Invalid regular expression in limit option- #{e.message}", :red
         exit 1
       end
-
     end
 
-  end
-end
+  end # class
+end # module
