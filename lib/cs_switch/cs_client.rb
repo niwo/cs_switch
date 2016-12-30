@@ -52,7 +52,7 @@ module CsSwitch
           listall: true
         )
       else
-        raise "Source domain #{domain} not found."
+        raise "Source domain \"#{options[:source_domain]}\" not found."
       end
     end
 
